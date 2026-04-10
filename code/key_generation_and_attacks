@@ -1,0 +1,253 @@
+from sage.crypto.sbox import SBox
+from sage.all import *
+
+userKey_hex = "770A8A65DA156D24EE2A093277530142"
+userKey_int = int(userKey_hex, 16)
+SBOX_ORDER = [3, 2, 1, 0, 7, 5, 6, 4]
+ELEMENT_0 = [12, 15, 3, 4, 11, 8, 7, 9]
+keyWords = [
+    (userKey_int >> 96) & 0xFFFFFFFF,
+    (userKey_int >> 64) & 0xFFFFFFFF,
+    (userKey_int >> 32) & 0xFFFFFFFF,
+    userKey_int & 0xFFFFFFFF]
+
+#Funkcje pomocniczne - konwersja do ciała GF(2)	
+def int_to_gf2_vector(n, bits=32):
+    return vector(GF(2), [(n >> i) & 1 for i in range(bits)])
+
+def gf2_vector_to_int(v):
+    result = 0
+    for i, bit in enumerate(v):
+        result |= (int(bit) << i)
+    return result
+
+#Generowanie kluczy rundowych
+def gen_prekeys(keyWords):
+    phi = int((sqrt(5) + 1) / 2 * (2**32)) & 0xFFFFFFFF
+    preKeys = list(keyWords)
+    
+    for i in range(4, 132):
+        w_i4 = preKeys[i-4]
+        w_i3 = preKeys[i-3]
+        w_i2 = preKeys[i-2]
+        w_i1 = preKeys[i-1]
+        
+        v_i4 = int_to_gf2_vector(w_i4)
+        v_i3 = int_to_gf2_vector(w_i3)
+        v_i2 = int_to_gf2_vector(w_i2)
+        v_i1 = int_to_gf2_vector(w_i1)
+        v_phi = int_to_gf2_vector(phi)
+        v_i = int_to_gf2_vector(i)
+        
+        w_xor_vector = v_i4 + v_i3 + v_i2 + v_i1 + v_phi + v_i
+        
+        w_xor = gf2_vector_to_int(w_xor_vector)
+        wi = ((w_xor << 11) | (w_xor >> 21)) & 0xFFFFFFFF
+        preKeys.append(wi)
+    
+    return preKeys
+
+def gen_sbox(ELEMENT_0):
+    R.<x> = PolynomialRing(GF(2))
+    wielomian = x^4 + x^3 + 1
+    F = GF(2**4, name="x", modulus=wielomian)
+    tab = []
+
+    sboxes = []
+
+    for element_0 in ELEMENT_0:
+        tab = [element_0]
+    
+        for i in range(1, 16):
+            element_F = F.from_integer(i)
+            element_inv = element_F ** (-1)
+            element_int = element_inv._integer_representation()
+            element_xor = element_int ^^ element_0
+            tab.append(element_xor)
+    
+        sboxes.append(SBox(tab))
+        
+    return sboxes
+
+def sbox_operation(sbox, w_i):
+    result = 0
+    for j in range(0, 32, 4):
+        oneSbox = (w_i >> j) & 0xF
+        sbox_output = sbox[oneSbox]
+        result |= (sbox_output << j)
+    return result & 0xFFFFFFFF
+
+def transform_prekeys(preKeys, sboxes):
+    subKeys = []
+    sbox_usage = [] 
+    
+    for i in range(33):
+        sbox_index = SBOX_ORDER[i % 8]
+        sbox = sboxes[sbox_index]
+        start = i * 4
+        sbox_input = preKeys[start:start+4]       
+        subKey = [sbox_operation(sbox, w_i) for w_i in sbox_input]
+        subKeys.extend(subKey)
+        sbox_usage.append((i, sbox_index, ELEMENT_0[sbox_index]))
+    
+    return subKeys, sbox_usage
+
+def return_roundKeys(subkeys):    
+    roundKeys = []
+    for i in range(0, len(subkeys), 4):
+        k0, k1, k2, k3 = subkeys[i], subkeys[i+1], subkeys[i+2], subkeys[i+3]
+        round_key = (k0 << 96) | (k1 << 64) | (k2 << 32) | k3
+        roundKeys.append(round_key)
+    
+    return roundKeys
+
+def gen_round_keys(keyWords):
+    preKeys = gen_prekeys(keyWords)
+    sboxes = gen_sbox(ELEMENT_0)
+    subKeys, sbox_usage_info = transform_prekeys(preKeys, sboxes)
+    roundKeys = return_roundKeys(subKeys)
+    print("Wykorzystane Sboxy:")
+    for i, sbox in enumerate(sboxes):
+        print(f"S-Box {i} (element0 = {ELEMENT_0[i]:2d}): {sbox}")
+    print("_" * 80)
+    print("\nWyświetlanie kluczy rundowych oraz numeru użytego Sboxa:\n")
+    print(f"Liczba kluczy rundowych: {len(roundKeys)}\n")
+    for i, key in enumerate(roundKeys):
+        sbox_idx = SBOX_ORDER[i % 8]
+        print(f"Runda {i:2d}: S-Box {sbox_idx}: {key:032x}")
+    print("_" * 80)
+    return roundKeys, sboxes, subKeys, sbox_usage_info
+
+roundKeys, sboxes, subKeys, sbox_usage_info = gen_round_keys(keyWords)
+
+#Analiza
+def inverse_sbox_operation(sbox, w_i):
+    result = 0
+    sbox_inv = sbox.inverse()
+    for j in range(0, 32, 4):
+        oneSbox = (w_i >> j) & 0xF
+        sbox_output = sbox_inv[oneSbox]
+        result |= (sbox_output << j)
+    return result & 0xFFFFFFFF
+
+def recover_prekeys_from_roundkey(round_key_32, sboxes, round_index):
+    k3 = round_key_32 & 0xFFFFFFFF
+    k2 = (round_key_32 >> 32) & 0xFFFFFFFF
+    k1 = (round_key_32 >> 64) & 0xFFFFFFFF
+    k0 = (round_key_32 >> 96) & 0xFFFFFFFF
+    
+    subKeys = [k0, k1, k2, k3]
+    
+    sbox_index = SBOX_ORDER[round_index % 8]
+    sbox = sboxes[sbox_index]
+    
+    preKeys = [inverse_sbox_operation(sbox, w_i) for w_i in subKeys]
+    
+    return preKeys, sbox_index
+
+def recover_single_prekey(w_i, w_i1, w_i2, w_i3, i):
+    phi = int((sqrt(5) + 1) / 2 * (2**32)) & 0xFFFFFFFF
+    w_xor_rotated = ((w_i >> 11) | (w_i << 21)) & 0xFFFFFFFF  
+    
+    v_rotated = int_to_gf2_vector(w_xor_rotated)
+    v_i3 = int_to_gf2_vector(w_i3)
+    v_i2 = int_to_gf2_vector(w_i2) 
+    v_i1 = int_to_gf2_vector(w_i1)
+    v_phi = int_to_gf2_vector(phi)
+    v_i = int_to_gf2_vector(i)
+    
+    v_w_i4 = v_rotated + v_i3 + v_i2 + v_i1 + v_phi + v_i
+    return gf2_vector_to_int(v_w_i4)
+
+def full_key_recovery_attack(known_round_key, known_round_index, sboxes):
+    print("\nOdzyskiwanie kluczy rundowych")
+    sbox_idx = SBOX_ORDER[known_round_index % 8]
+    print(f"Znany klucz rundy {known_round_index} (S-Box {sbox_idx}): {known_round_key:032x}")
+
+    preKeys_from_round, sbox_used = recover_prekeys_from_roundkey(known_round_key, sboxes, known_round_index)
+    
+    print(f"\nOdzyskano preKeys z rundy {known_round_index} (użyto odwrotności S-Boxa {sbox_used}):")
+    for j, pk in enumerate(preKeys_from_round):
+        idx = known_round_index * 4 + j
+        print(f"  preKeys[{idx:3d}] = {pk:08x}")
+    
+    known_preKeys = [None] * 132
+    start_idx = known_round_index * 4
+    for j in range(4):
+        known_preKeys[start_idx + j] = preKeys_from_round[j]
+    
+    iteration_count = 0
+    total_recovered = 4  
+    
+    while True:
+        new_recoveries = 0
+        iteration_count += 1
+        
+        for i in range(131, 3, -1):
+            if known_preKeys[i] is not None:
+                if (i-1 >= 0 and known_preKeys[i-1] is not None and 
+                    i-2 >= 0 and known_preKeys[i-2] is not None and 
+                    i-3 >= 0 and known_preKeys[i-3] is not None and 
+                    i-4 >= 0 and known_preKeys[i-4] is None):
+                    
+                    w_i4 = recover_single_prekey(known_preKeys[i], known_preKeys[i-1], 
+                                               known_preKeys[i-2], known_preKeys[i-3], i)
+                    known_preKeys[i-4] = w_i4
+                    new_recoveries += 1
+                    total_recovered += 1
+
+        
+        if new_recoveries == 0:
+            break
+
+    print(f"\nWszystkie odzyskane wartości preKeys:")
+
+    for i in range(0, len(known_preKeys), 4):
+        has_values = False
+        line = f"preKeys[{i:3d} -{i+3:3d}]: "
+        
+        for j in range(4):
+            if i + j < len(known_preKeys):
+                if known_preKeys[i + j] is not None:
+                    line += f"{known_preKeys[i + j]:08x} "
+                    has_values = True 
+        if has_values:
+            print(line)
+
+    recovered_roundKeys = []
+    for i in range(33):
+        start = i * 4
+        if all(known_preKeys[start + j] is not None for j in range(4)):
+            sbox_index = SBOX_ORDER[i % 8]
+            sbox = sboxes[sbox_index]
+            
+            subKey = [sbox_operation(sbox, known_preKeys[start + j]) for j in range(4)]
+            round_key = (subKey[0] << 96) | (subKey[1] << 64) | (subKey[2] << 32) | subKey[3]
+            recovered_roundKeys.append((i, round_key, sbox_index))
+    
+    return recovered_roundKeys, known_preKeys
+
+#Przeprowadzenie ataku
+known_round_key = roundKeys[32] 
+known_round_index = 32
+recovered_rounds, recovered_preKeys = full_key_recovery_attack(known_round_key, known_round_index, sboxes)
+
+print("\nPorównanie oryginalnych i odzyskanych kluczy rundowych:")
+print("_" * 80)
+
+all_match = True
+for i in range(len(roundKeys)):
+    original = roundKeys[i]
+    sbox_idx = SBOX_ORDER[i % 8]
+    recovered = None
+    recovered_sbox = None
+    for idx, key, sbox in recovered_rounds:
+        if idx == i:
+            recovered = key
+            recovered_sbox = sbox
+            break
+    
+    if recovered is not None:
+        print(f"Runda {i:2d}: Oryginalny: {original:032x} ; Odtworzony: {recovered:032x}")
+
+    
