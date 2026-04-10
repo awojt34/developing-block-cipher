@@ -1,2 +1,6 @@
 # developing-block-cipher
-Design, implementation and cryptanalysis of original block cipher in SageMath based on guidelines from Military University of Technology Cryptography Course
+This repository contains two projects completed as a part of Cryptology and Cybersecurity course on Military University in Warsaw.<br />
+**Blowfish implementation**<br />
+This project includes two implementations of Blowfish algorithm. Its goal was to choose a block cipher using Feistel network and show how to different implementations of the algorithm can differ.
+**Design and anlysis of my own algorithm**
+Rest of the repository is devoted to designing my own algorithm using Substitution-Permutation Network. It includes code with implementation and tests of the cipher as well as reports with the analysis of the idea for the algorithm. 
