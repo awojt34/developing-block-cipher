@@ -1,0 +1,441 @@
+Szyfrogram bazowy: 39334E4CA3AF085ACFE792CE6A066DFF
+Szyfrogram bazowy: 00111001001100110100111001001100101000111010111100001000010110101100111111100111100100101100111001101010000001100110110111111111
+Wartość bitu na pozycji 10 w szyfrogramie: 1
+Iteracja: 0
+Klucz:  0xfffffffffffffffffffffffffffffffe
+Szyfrogram (hex):  dafc01eda9f279cf6264ea455beae5f1
+Brak zmiany.
+Iteracja: 1
+Klucz:  0xfffffffffffffffffffffffffffffffd
+Szyfrogram (hex):  1266a2ca6b59f3b2713c6a563e5ac672
+Brak zmiany.
+Iteracja: 2
+Klucz:  0xfffffffffffffffffffffffffffffffb
+Szyfrogram (hex):  932f2a093e0efbb035b3866682fc9775
+Brak zmiany.
+Iteracja: 3
+Klucz:  0xfffffffffffffffffffffffffffffff7
+Szyfrogram (hex):  a348e766074aa0e7d86bbc35c58352e0
+Zmiana bitu.
+Iteracja: 4
+Klucz:  0xffffffffffffffffffffffffffffffef
+Szyfrogram (hex):  6c450e0cd5cfd83b5c2a60c5b67a1ac2
+Zmiana bitu.
+Iteracja: 5
+Klucz:  0xffffffffffffffffffffffffffffffdf
+Szyfrogram (hex):  be211d7e3401ae6e8c9e8dd0166753fd
+Zmiana bitu.
+Iteracja: 6
+Klucz:  0xffffffffffffffffffffffffffffffbf
+Szyfrogram (hex):  4993da85f7a89a13a3e34bad9a2d030f
+Zmiana bitu.
+Iteracja: 7
+Klucz:  0xffffffffffffffffffffffffffffff7f
+Szyfrogram (hex):  5d3fb9566698e7513dbb73598ccc104a
+Zmiana bitu.
+Iteracja: 8
+Klucz:  0xfffffffffffffffffffffffffffffeff
+Szyfrogram (hex):  a353b3338b9192f8f00262a90d131a4a
+Zmiana bitu.
+Iteracja: 9
+Klucz:  0xfffffffffffffffffffffffffffffdff
+Szyfrogram (hex):  ee37706610b4bf3ea216bca5913dccc1
+Brak zmiany.
+Iteracja: 10
+Klucz:  0xfffffffffffffffffffffffffffffbff
+Szyfrogram (hex):  62f31b68a07b4083345fa46af81accfc
+Brak zmiany.
+Iteracja: 11
+Klucz:  0xfffffffffffffffffffffffffffff7ff
+Szyfrogram (hex):  921ac93f45df32284ca17f815b864dc9
+Brak zmiany.
+Iteracja: 12
+Klucz:  0xffffffffffffffffffffffffffffefff
+Szyfrogram (hex):  3c0fcb81ad6a9250abbe01a6c040adff
+Brak zmiany.
+Iteracja: 13
+Klucz:  0xffffffffffffffffffffffffffffdfff
+Szyfrogram (hex):  bee7fd23606f3484cb50702b56d5131b
+Zmiana bitu.
+Iteracja: 14
+Klucz:  0xffffffffffffffffffffffffffffbfff
+Szyfrogram (hex):  595ba884c69a7ac01727f86858e68033
+Zmiana bitu.
+Iteracja: 15
+Klucz:  0xffffffffffffffffffffffffffff7fff
+Szyfrogram (hex):  6c5a369e2252fed1a3bb5e769a9417ab
+Brak zmiany.
+Iteracja: 16
+Klucz:  0xfffffffffffffffffffffffffffeffff
+Szyfrogram (hex):  ca555e7012263d2e353e11eac1960b44
+Zmiana bitu.
+Iteracja: 17
+Klucz:  0xfffffffffffffffffffffffffffdffff
+Szyfrogram (hex):  0d82c58941417c2372fb4bd3443ef2c3
+Zmiana bitu.
+Iteracja: 18
+Klucz:  0xfffffffffffffffffffffffffffbffff
+Szyfrogram (hex):  6c7170bdab4b8821f81640235f818650
+Brak zmiany.
+Iteracja: 19
+Klucz:  0xfffffffffffffffffffffffffff7ffff
+Szyfrogram (hex):  7f5cce015f591254f88145cbd67e31fe
+Zmiana bitu.
+Iteracja: 20
+Klucz:  0xffffffffffffffffffffffffffefffff
+Szyfrogram (hex):  d9a90084c35212b6eef97c15f7c7864f
+Brak zmiany.
+Iteracja: 21
+Klucz:  0xffffffffffffffffffffffffffdfffff
+Szyfrogram (hex):  ffb473a77561c14fa0480f950477812f
+Zmiana bitu.
+Iteracja: 22
+Klucz:  0xffffffffffffffffffffffffffbfffff
+Szyfrogram (hex):  3bd7df78148d4fa18f024a8ff14bbecc
+Brak zmiany.
+Iteracja: 23
+Klucz:  0xffffffffffffffffffffffffff7fffff
+Szyfrogram (hex):  013d8c42baee0bc87ed5d90acec0f13d
+Zmiana bitu.
+Iteracja: 24
+Klucz:  0xfffffffffffffffffffffffffeffffff
+Szyfrogram (hex):  5f1500aa64fcebb6c6f393a93a818a76
+Zmiana bitu.
+Iteracja: 25
+Klucz:  0xfffffffffffffffffffffffffdffffff
+Szyfrogram (hex):  70c71837d9c09bc2d8731244a71070ce
+Zmiana bitu.
+Iteracja: 26
+Klucz:  0xfffffffffffffffffffffffffbffffff
+Szyfrogram (hex):  e9ace6baf243a7dd7f212e279126f8c9
+Zmiana bitu.
+Iteracja: 27
+Klucz:  0xfffffffffffffffffffffffff7ffffff
+Szyfrogram (hex):  771fb7734d18273ed9655de036478c2e
+Brak zmiany.
+Iteracja: 28
+Klucz:  0xffffffffffffffffffffffffefffffff
+Szyfrogram (hex):  624283fa3e594eb5d80d81127612695d
+Zmiana bitu.
+Iteracja: 29
+Klucz:  0xffffffffffffffffffffffffdfffffff
+Szyfrogram (hex):  604f315750b0735ae908b273cdf23e26
+Brak zmiany.
+Iteracja: 30
+Klucz:  0xffffffffffffffffffffffffbfffffff
+Szyfrogram (hex):  0d2703283b6dfaad8228b8ad03af8e80
+Brak zmiany.
+Iteracja: 31
+Klucz:  0xffffffffffffffffffffffff7fffffff
+Szyfrogram (hex):  e0c4d1faa4b61d12cbbb1f205ecca71f
+Brak zmiany.
+Iteracja: 32
+Klucz:  0xfffffffffffffffffffffffeffffffff
+Szyfrogram (hex):  157fdfa5fbe33f259f0e80fab474a9b8
+Zmiana bitu.
+Iteracja: 33
+Klucz:  0xfffffffffffffffffffffffdffffffff
+Szyfrogram (hex):  2510d7cc71a37c0baafbc8be25b1e339
+Zmiana bitu.
+Iteracja: 34
+Klucz:  0xfffffffffffffffffffffffbffffffff
+Szyfrogram (hex):  45cf1f020f61414452c5645d33ee70a5
+Zmiana bitu.
+Iteracja: 35
+Klucz:  0xfffffffffffffffffffffff7ffffffff
+Szyfrogram (hex):  13501f232721c4234da07275aa594596
+Brak zmiany.
+Iteracja: 36
+Klucz:  0xffffffffffffffffffffffefffffffff
+Szyfrogram (hex):  2fb73f9c82c892b7c16a174d55ca9e4c
+Brak zmiany.
+Iteracja: 37
+Klucz:  0xffffffffffffffffffffffdfffffffff
+Szyfrogram (hex):  bf40aeb0ebe4c941e72953336f6fb7c6
+Brak zmiany.
+Iteracja: 38
+Klucz:  0xffffffffffffffffffffffbfffffffff
+Szyfrogram (hex):  521e6602f35d8c8837bb8fa12a8d1518
+Brak zmiany.
+Iteracja: 39
+Klucz:  0xffffffffffffffffffffff7fffffffff
+Szyfrogram (hex):  89bb5a033ae96eb4a44f808bddf63b35
+Zmiana bitu.
+Iteracja: 40
+Klucz:  0xfffffffffffffffffffffeffffffffff
+Szyfrogram (hex):  f7876563e164da08e31ddaf1e26bd55f
+Brak zmiany.
+Iteracja: 41
+Klucz:  0xfffffffffffffffffffffdffffffffff
+Szyfrogram (hex):  1096eea83bf9327d034f1bed9a7ccc3a
+Brak zmiany.
+Iteracja: 42
+Klucz:  0xfffffffffffffffffffffbffffffffff
+Szyfrogram (hex):  b8b2720f86ef4d44eb19535172bd3a45
+Zmiana bitu.
+Iteracja: 43
+Klucz:  0xfffffffffffffffffffff7ffffffffff
+Szyfrogram (hex):  d9e02ff63c759bda30f830253ea14955
+Zmiana bitu.
+Iteracja: 44
+Klucz:  0xffffffffffffffffffffefffffffffff
+Szyfrogram (hex):  9e79eb03a1d16a260e17cabd97740cfe
+Brak zmiany.
+Iteracja: 45
+Klucz:  0xffffffffffffffffffffdfffffffffff
+Szyfrogram (hex):  fe5b8527786748770b89d2ae1e323008
+Zmiana bitu.
+Iteracja: 46
+Klucz:  0xffffffffffffffffffffbfffffffffff
+Szyfrogram (hex):  804a6d8d0099cd3fe2bc4ad51c038bc3
+Zmiana bitu.
+Iteracja: 47
+Klucz:  0xffffffffffffffffffff7fffffffffff
+Szyfrogram (hex):  4027f44b975def243829e9fd4228c1d1
+Zmiana bitu.
+Iteracja: 48
+Klucz:  0xfffffffffffffffffffeffffffffffff
+Szyfrogram (hex):  2ee0cf67a3485a0498df42c4e449b5c7
+Brak zmiany.
+Iteracja: 49
+Klucz:  0xfffffffffffffffffffdffffffffffff
+Szyfrogram (hex):  5c6a8f41156229af45108008c39518f5
+Zmiana bitu.
+Iteracja: 50
+Klucz:  0xfffffffffffffffffffbffffffffffff
+Szyfrogram (hex):  2d29885442d6c2e4f19814cfc356f525
+Brak zmiany.
+Iteracja: 51
+Klucz:  0xfffffffffffffffffff7ffffffffffff
+Szyfrogram (hex):  cd2aa8847ec2fefdfc40aaa28271400a
+Zmiana bitu.
+Iteracja: 52
+Klucz:  0xffffffffffffffffffefffffffffffff
+Szyfrogram (hex):  f845e7f03c4ba48e1bba5e9fb99a46cf
+Brak zmiany.
+Iteracja: 53
+Klucz:  0xffffffffffffffffffdfffffffffffff
+Szyfrogram (hex):  ff9b3114b625f26483be562bd46dfe7f
+Brak zmiany.
+Iteracja: 54
+Klucz:  0xffffffffffffffffffbfffffffffffff
+Szyfrogram (hex):  8ad6cb617a26e6a9a7a4d1a47834164f
+Brak zmiany.
+Iteracja: 55
+Klucz:  0xffffffffffffffffff7fffffffffffff
+Szyfrogram (hex):  9a61392ebd531e2dabdb1511a39f18f7
+Zmiana bitu.
+Iteracja: 56
+Klucz:  0xfffffffffffffffffeffffffffffffff
+Szyfrogram (hex):  9876f1206f7b52ce0a6ded9f5c24f18e
+Zmiana bitu.
+Iteracja: 57
+Klucz:  0xfffffffffffffffffdffffffffffffff
+Szyfrogram (hex):  3ec6f7188bfeca8a7d6d38076888a8d9
+Zmiana bitu.
+Iteracja: 58
+Klucz:  0xfffffffffffffffffbffffffffffffff
+Szyfrogram (hex):  0b8df3e0f734c5aa33cfe914eb08d0ae
+Zmiana bitu.
+Iteracja: 59
+Klucz:  0xfffffffffffffffff7ffffffffffffff
+Szyfrogram (hex):  4f8973bc477ace863b1c5b6bfd07aeb2
+Brak zmiany.
+Iteracja: 60
+Klucz:  0xffffffffffffffffefffffffffffffff
+Szyfrogram (hex):  7be6ba71174f21c069397582a793e997
+Zmiana bitu.
+Iteracja: 61
+Klucz:  0xffffffffffffffffdfffffffffffffff
+Szyfrogram (hex):  74e3a4ebfe9c7b8ac6fbfaff201fe279
+Zmiana bitu.
+Iteracja: 62
+Klucz:  0xffffffffffffffffbfffffffffffffff
+Szyfrogram (hex):  97b8fbe6161901d4d2357cb9c6e46a63
+Zmiana bitu.
+Iteracja: 63
+Klucz:  0xffffffffffffffff7fffffffffffffff
+Szyfrogram (hex):  fb08e323361bfa14c480e9a52537fe23
+Brak zmiany.
+Iteracja: 64
+Klucz:  0xfffffffffffffffeffffffffffffffff
+Szyfrogram (hex):  923491493848aae1cb59af03d62102af
+Zmiana bitu.
+Iteracja: 65
+Klucz:  0xfffffffffffffffdffffffffffffffff
+Szyfrogram (hex):  4609ed30340e647e4952e18172afe50a
+Brak zmiany.
+Iteracja: 66
+Klucz:  0xfffffffffffffffbffffffffffffffff
+Szyfrogram (hex):  18bfba4cff4e68ff09bcb2640df7d90c
+Zmiana bitu.
+Iteracja: 67
+Klucz:  0xfffffffffffffff7ffffffffffffffff
+Szyfrogram (hex):  9c71e93cbd239f2891d8a3ad92481bec
+Zmiana bitu.
+Iteracja: 68
+Klucz:  0xffffffffffffffefffffffffffffffff
+Szyfrogram (hex):  a3ee101eeaa844a05d1d141499248555
+Brak zmiany.
+Iteracja: 69
+Klucz:  0xffffffffffffffdfffffffffffffffff
+Szyfrogram (hex):  f2010b75beba6240564ab763d7765e01
+Brak zmiany.
+Iteracja: 70
+Klucz:  0xffffffffffffffbfffffffffffffffff
+Szyfrogram (hex):  00a58018eb7196763803a00f4f269d9a
+Brak zmiany.
+Iteracja: 71
+Klucz:  0xffffffffffffff7fffffffffffffffff
+Szyfrogram (hex):  0e1bdccb57b96aff8599bf18d4760ab4
+Zmiana bitu.
+Iteracja: 72
+Klucz:  0xfffffffffffffeffffffffffffffffff
+Szyfrogram (hex):  86261cf3136403e55f49f3bcfa59afb2
+Brak zmiany.
+Iteracja: 73
+Klucz:  0xfffffffffffffdffffffffffffffffff
+Szyfrogram (hex):  0bcadbf9a9dd84fb4299202b53a953bf
+Zmiana bitu.
+Iteracja: 74
+Klucz:  0xfffffffffffffbffffffffffffffffff
+Szyfrogram (hex):  9bb051b547dad2777d96fc32e89db445
+Brak zmiany.
+Iteracja: 75
+Klucz:  0xfffffffffffff7ffffffffffffffffff
+Szyfrogram (hex):  cbe547111d031d15eb24bee97fd489e7
+Zmiana bitu.
+Iteracja: 76
+Klucz:  0xffffffffffffefffffffffffffffffff
+Szyfrogram (hex):  393326cb846ade82f214f4f50f86baee
+Zmiana bitu.
+Iteracja: 77
+Klucz:  0xffffffffffffdfffffffffffffffffff
+Szyfrogram (hex):  53f4899373366d6366b591f3dc7e955f
+Brak zmiany.
+Iteracja: 78
+Klucz:  0xffffffffffffbfffffffffffffffffff
+Szyfrogram (hex):  7b16d806dd22053456d44aca67503373
+Zmiana bitu.
+Iteracja: 79
+Klucz:  0xffffffffffff7fffffffffffffffffff
+Szyfrogram (hex):  7af6ff0bb8adb9ba8954252980b97d40
+Brak zmiany.
+Iteracja: 80
+Klucz:  0xfffffffffffeffffffffffffffffffff
+Szyfrogram (hex):  01793357f97d288e7124db763154c2a6
+Zmiana bitu.
+Iteracja: 81
+Klucz:  0xfffffffffffdffffffffffffffffffff
+Szyfrogram (hex):  8209c7ab20f8cd96f9f4710fea9a244a
+Brak zmiany.
+Iteracja: 82
+Klucz:  0xfffffffffffbffffffffffffffffffff
+Szyfrogram (hex):  4ee1c595880bc043dfd3ccab227c9f22
+Brak zmiany.
+Iteracja: 83
+Klucz:  0xfffffffffff7ffffffffffffffffffff
+Szyfrogram (hex):  076da6b88ad4516399c9e82073fc07fa
+Brak zmiany.
+Iteracja: 84
+Klucz:  0xffffffffffefffffffffffffffffffff
+Szyfrogram (hex):  3318f47fc1eb435fbe493f91b0349ddd
+Brak zmiany.
+Iteracja: 85
+Klucz:  0xffffffffffdfffffffffffffffffffff
+Szyfrogram (hex):  719914286c1f631b8e984c74a71eb596
+Brak zmiany.
+Iteracja: 86
+Klucz:  0xffffffffffbfffffffffffffffffffff
+Szyfrogram (hex):  7f20c502038a1c2f3b42cbc0fc98d1b0
+Zmiana bitu.
+Iteracja: 87
+Klucz:  0xffffffffff7fffffffffffffffffffff
+Szyfrogram (hex):  7f5c88f41e85ab468491bebbccd081ac
+Zmiana bitu.
+Iteracja: 88
+Klucz:  0xfffffffffeffffffffffffffffffffff
+Szyfrogram (hex):  7e5157a82b7afd636b67dd5586ced0e3
+Zmiana bitu.
+Iteracja: 89
+Klucz:  0xfffffffffdffffffffffffffffffffff
+Szyfrogram (hex):  0cda5d98c9659264bdc9ef9db6c3fb00
+Zmiana bitu.
+Iteracja: 90
+Klucz:  0xfffffffffbffffffffffffffffffffff
+Szyfrogram (hex):  beef00fedd8c2bae5486c2f1d07dff35
+Brak zmiany.
+Iteracja: 91
+Klucz:  0xfffffffff7ffffffffffffffffffffff
+Szyfrogram (hex):  c24fd0aac5939744c71631849366b626
+Brak zmiany.
+Iteracja: 92
+Klucz:  0xffffffffefffffffffffffffffffffff
+Szyfrogram (hex):  d9109395c1de142d573f505ce44b78e8
+Zmiana bitu.
+Iteracja: 93
+Klucz:  0xffffffffdfffffffffffffffffffffff
+Szyfrogram (hex):  9994cced1b3894627b2cbf5a289f8639
+Brak zmiany.
+Iteracja: 94
+Klucz:  0xffffffffbfffffffffffffffffffffff
+Szyfrogram (hex):  dbb53b4c87adde37234050d1eebba6f1
+Brak zmiany.
+Iteracja: 95
+Klucz:  0xffffffff7fffffffffffffffffffffff
+Szyfrogram (hex):  c58f83a494bf4ea68fe2650faf7c725e
+Zmiana bitu.
+Iteracja: 96
+Klucz:  0xfffffffeffffffffffffffffffffffff
+Szyfrogram (hex):  7a755dff92f4b5cea974ffe60c7c6be0
+Zmiana bitu.
+Iteracja: 97
+Klucz:  0xfffffffdffffffffffffffffffffffff
+Szyfrogram (hex):  30f1414debc64f2c912be4847fa4836a
+Zmiana bitu.
+Iteracja: 98
+Klucz:  0xfffffffbffffffffffffffffffffffff
+Szyfrogram (hex):  5303719191a3220dd70fe48372bfc259
+Zmiana bitu.
+Iteracja: 99
+Klucz:  0xfffffff7ffffffffffffffffffffffff
+Szyfrogram (hex):  edb7fe0960a3aba4687ea397746ff432
+Brak zmiany.
+Iteracja: 100
+Klucz:  0xffffffefffffffffffffffffffffffff
+Szyfrogram (hex):  0baa6d688e6980b7972d3e2d2833e30e
+Zmiana bitu.
+Iteracja: 101
+Klucz:  0xffffffdfffffffffffffffffffffffff
+Szyfrogram (hex):  64ba6406ba2b4fb313c25a77d7b182ef
+Zmiana bitu.
+Iteracja: 102
+Klucz:  0xffffffbfffffffffffffffffffffffff
+Szyfrogram (hex):  ef9a7a14c0059be48c2b41ec0ddb268f
+Brak zmiany.
+Iteracja: 103
+Klucz:  0xffffff7fffffffffffffffffffffffff
+Szyfrogram (hex):  e90ba90ddd71a971bad7240e3af72682
+Brak zmiany.
+Iteracja: 104
+Klucz:  0xfffffeffffffffffffffffffffffffff
+Szyfrogram (hex):  472abc9b1c2425e8c638d5ebf7b88130
+Zmiana bitu.
+Iteracja: 105
+Klucz:  0xfffffdffffffffffffffffffffffffff
+Szyfrogram (hex):  609445c48f43ce3f7d82f90fd097658f
+Brak zmiany.
+Iteracja: 106
+Klucz:  0xfffffbffffffffffffffffffffffffff
+Szyfrogram (hex):  04c1ce6c0b411f0eac27c5b681667dbd
+Brak zmiany.
+Iteracja: 107
+Klucz:  0xfffff7ffffffffffffffffffffffffff
+Szyfrogram (hex):  2bad62b1695e3fcab308676de5eeca08
+Zmiana bitu.
+Iteracja: 108
+Klucz:  0xffffefffffffffffffffffffffffffff
+Szyfrogram (hex):  575197cb138f5ed7e982a44ffa63c12b
+Zmiana bitu.
+Iteracja: 109
+Klucz:  0xffffdfffffffffffffffffffffffffff
