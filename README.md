@@ -1,6 +1,13 @@
-# developing-block-cipher
-This repository contains two projects completed as a part of Cryptology and Cybersecurity course on Military University in Warsaw.<br /><br />
-**Blowfish implementation**<br />
-This project includes two implementations of Blowfish algorithm. Its goal was to choose a block cipher using Feistel network and show how to different implementations of the algorithm can differ.<br /><br />
-**Design and anlysis of my own algorithm**<br />
-Rest of the repository is devoted to designing my own algorithm using Substitution-Permutation Network. It includes code with implementation and tests of the cipher as well as reports with the analysis of the idea for the algorithm. 
+# Block Cipher Development
+
+Academic repository from the Cryptology and Cybersecurity 
+programme at the Military University of Technology (WAT), Warsaw.  
+Contains two independent projects:
+
+- **Blowfish Implementation** — comparative analysis of two 
+  implementations of the Blowfish cipher, focusing on 
+  behavioural differences within a Feistel network architecture.
+
+- **Custom SPN Cipher** — original block cipher built on a 
+  Substitution-Permutation Network, including implementation, 
+  test coverage and written analysis of the design.
